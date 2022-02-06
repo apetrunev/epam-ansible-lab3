@@ -1,6 +1,5 @@
 ---
 vsftpd_anonymous_enable: YES
-vsftpd_anon_root: /var/ftp/pub/upload
 vsftpd_anon_upload_enable: YES
 vsftpd_anon_mkdir_write_enable: YES
 vsftpd_no_anon_password: YES

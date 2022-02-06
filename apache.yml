@@ -3,4 +3,3 @@
   hosts: node1.example.com
   roles:
     - apache
-    - vsftpd

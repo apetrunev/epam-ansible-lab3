@@ -12,7 +12,7 @@
 anonymous_enable={{ vsftpd_anonymous_enable }}
 #
 # Uncomment this to allow local users to log in.
-local_enable=YES
+local_enable=NO
 #
 # Uncomment this to enable any form of FTP write command.
 write_enable=YES
@@ -25,7 +25,6 @@ local_umask=022
 # has an effect if the above global write enable is activated. Also, you will
 # obviously need to create a directory writable by the FTP user.
 # When SELinux is enforcing check for SE bool allow_ftpd_anon_write, allow_ftpd_full_access
-anon_root={{ vsftpd_anon_root }}
 no_anon_password={{ vsftpd_no_anon_password }}
 anon_upload_enable={{ vsftpd_anon_upload_enable }}
 #
@@ -45,6 +44,7 @@ allow_writeable_chroot=YES
 #
 # Make sure PORT transfer connections originate from port 20 (ftp-data).
 connect_from_port_20=YES
+ftp_data_port=20
 #
 # If you want, you can arrange for uploaded anonymous files to be owned by
 # a different user. Note! Using "root" for uploaded files is not

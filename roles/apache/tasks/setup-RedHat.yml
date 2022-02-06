@@ -4,6 +4,12 @@
     name: "{{ apache_package }}"
     state: "{{ apache_package_state }}"
 
+- name: Make shure firewalld up and running
+  ansible.builtin.service:
+    name: firewalld
+    enabled: yes
+    state: started
+
 - name: Start httpd service
   ansible.builtin.service:
     name: "{{ apache_service }}"
